@@ -1,6 +1,7 @@
 
 import Footer from "./common/Footer";
 import Header from "./common/Header";
+import MobileMenu from "./common/partials/mobile-menu";
 
 const Layout = ({ children }) => {
   return (
@@ -10,6 +11,8 @@ const Layout = ({ children }) => {
         {children}
         <Footer />
       </div>
+
+      <MobileMenu />
     </>
   );
 };
