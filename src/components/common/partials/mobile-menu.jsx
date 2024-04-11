@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
 import ALink from "@/components/features/CustomLink";
+import LoginModal from "@/components/features/modals/login-modal";
 
 function MobileMenu(props) {
   const [search, setSearch] = useState("");
@@ -112,7 +113,8 @@ function MobileMenu(props) {
           </li>
 
           <li>
-            <ALink href={"/pages/account"}>Login</ALink>
+            {/* <ALink href={"/pages/account"}>Login</ALink> */}
+            <LoginModal />
           </li>
           <li>
             <ALink href={"/pages/cart"}>My Cart</ALink>

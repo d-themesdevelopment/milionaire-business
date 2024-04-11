@@ -35,7 +35,7 @@ function LoginModal() {
 
     return (
         <>
-            <a className="login-link d-lg-show" href="#" onClick={ openModal }>
+            <a className="login-link" href="#" onClick={ openModal }>
                 <i className="d-icon-user"></i>Sign in</a>
             <span className="delimiter">/</span>
             <a className="register-link ml-0" onClick={ ( e ) => openModal( e, 1 ) } href="#">Register</a>
@@ -87,7 +87,7 @@ function LoginModal() {
                                                 <label className="ls-m">or Login With</label>
                                                 <div className="social-links">
                                                     <ALink href="#" className="social-link social-google fab fa-google border-no"></ALink>
-                                                    <ALink href="#" className="social-link social-facebook fab fa-facebook-f border-no"></ALink>
+                                                    <ALink href="#" className="social-link social-facebook fab fa-facebook-f border-no ml-2 mr-2"></ALink>
                                                     <ALink href="#" className="social-link social-twitter fab fa-twitter border-no"></ALink>
                                                 </div>
                                             </div>
@@ -116,7 +116,7 @@ function LoginModal() {
                                                 <label className="ls-m">or Register With</label>
                                                 <div className="social-links">
                                                     <ALink href="#" className="social-link social-google fab fa-google border-no"></ALink>
-                                                    <ALink href="#" className="social-link social-facebook fab fa-facebook-f border-no"></ALink>
+                                                    <ALink href="#" className="social-link social-facebook fab fa-facebook-f border-no ml-2 mr-2"></ALink>
                                                     <ALink href="#" className="social-link social-twitter fab fa-twitter border-no"></ALink>
                                                 </div>
                                             </div>

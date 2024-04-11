@@ -365,7 +365,6 @@ footer .social-links > a {
     }
   }
 
-
   .btn {
     padding: 1.2rem 2rem;
     text-transform: capitalize;
@@ -420,10 +419,10 @@ footer .social-links > a {
     }
 
     .map-picker {
-      position: absolute;;
+      position: absolute;
     }
   }
-  
+
   .book-box {
     padding: 2rem;
     background: #fff;
@@ -451,4 +450,25 @@ footer .social-links > a {
 .btn-yellow {
   background-color: #ffc53c;
   border-color: #ffc53c;
+}
+
+@media (max-width: 767px) {
+  .login-link {
+    .d-icon-user {
+      display: none;
+    }
+
+    & + .delimiter {
+      display: none;
+    }
+  }
+
+  .register-link {
+    display: none !important;
+  }
+
+  .ReactModalPortal {
+    position: relative;
+    z-index: 10001;
+  }
 }
