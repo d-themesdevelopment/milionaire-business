@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 // import InputRange from "react-input-range";
 
 import ALink from "@/components/features/CustomLink";
-import Card from "@/components/features/accordion/Card";
+// import Card from "@/components/features/accordion/Card";
 
 import SlideToggle from "react-slide-toggle";
 
@@ -113,7 +113,7 @@ function SidebarFilterOne(props) {
           </div>
 
           <div className="widget widget-collapsible">
-            <Card
+            {/* <Card
               title="<h3 class='widget-title'>All Categories<span class='toggle-btn p-0 parse-content'></span></h3>"
               type="parse"
               expanded={true}
@@ -129,7 +129,7 @@ function SidebarFilterOne(props) {
                   <a href="#">For Boat</a>
                 </li>
               </ul>
-            </Card>
+            </Card> */}
           </div>
 
           {/* <div className="widget widget-collapsible">
@@ -167,7 +167,7 @@ function SidebarFilterOne(props) {
           </div> */}
 
           <div className="widget widget-collapsible">
-            <Card
+            {/* <Card
               title="<h3 class='widget-title'>Size<span class='toggle-btn p-0 parse-content'></span></h3>"
               type="parse"
               expanded={true}
@@ -181,11 +181,11 @@ function SidebarFilterOne(props) {
                   </li>
                 ))}
               </ul>
-            </Card>
+            </Card> */}
           </div>
 
           <div className="widget widget-collapsible">
-            <Card
+            {/* <Card
               title="<h3 class='widget-title'>Color<span class='toggle-btn p-0 parse-content'></span></h3>"
               type="parse"
               expanded={true}
@@ -199,7 +199,7 @@ function SidebarFilterOne(props) {
                   </li>
                 ))}
               </ul>
-            </Card>
+            </Card> */}
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import Accordion from "@/components/features/accordion/Accordion";
-import Card from "@/components/features/accordion/Card";
+// import Accordion from "@/components/features/accordion/Accordion";
+// import Card from "@/components/features/accordion/Card";
 import TestimonialOne from "@/components/features/testimonials/TestimonialOne";
 import RelatedBooking from "@/components/partials/Booking/RelatedBooking";
 import { useState } from "react";
@@ -394,7 +394,7 @@ const BookingPage = () => {
               </Swiper>
 
               <div className="mt-10 "></div>
-              <Accordion adClass="accordion-simple">
+              {/* <Accordion adClass="accordion-simple">
                 <Card
                   title="Activities you can do on Bayda island:"
                   adClass="border-no"
@@ -465,7 +465,7 @@ const BookingPage = () => {
                     />
                   </div>
                 </Card>
-              </Accordion>
+              </Accordion> */}
             </div>
           </div>
 
