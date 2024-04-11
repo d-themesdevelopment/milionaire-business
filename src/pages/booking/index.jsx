@@ -6,12 +6,40 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Collapse, Select } from "antd";
 
 const BookingPage = () => {
   const [date, setDate] = useState();
 
+  const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
+  const items = [
+    {
+      key: "1",
+      label: "This is panel header 1",
+      children: <p>{text}</p>,
+    },
+    {
+      key: "2",
+      label: "This is panel header 2",
+      children: <p>{text}</p>,
+    },
+    {
+      key: "3",
+      label: "This is panel header 3",
+      children: <p>{text}</p>,
+    },
+  ];
+
   const handleChangeDate = (date) => {
     setDate(date);
+  };
+
+  const onChange = (key) => {
+    console.log(key);
   };
 
   return (
@@ -394,6 +422,11 @@ const BookingPage = () => {
               </Swiper>
 
               <div className="mt-10 "></div>
+              <Collapse
+                items={items}
+                defaultActiveKey={["1"]}
+                onChange={onChange}
+              />
               {/* <Accordion adClass="accordion-simple">
                 <Card
                   title="Activities you can do on Bayda island:"
