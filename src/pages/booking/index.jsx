@@ -69,8 +69,6 @@ const BookingPage = () => {
 
   return (
     <main className="booking mt-6 mb-6">
-      {/* <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} /> */}
-
       <div className="container">
         <div className="product-single row">
           <div className="col-12 col-lg-8">
@@ -449,6 +447,11 @@ const BookingPage = () => {
               </Swiper>
 
               <div className="mt-10 "></div>
+              <Collapse
+                items={items}
+                defaultActiveKey={["6"]}
+                onChange={onChange}
+              />
             </div>
           </div>
 
