@@ -21,7 +21,7 @@ const CheckoutPage = () => {
             <div className="row">
               <div className="col-lg-7 mb-6 mb-lg-0 pr-lg-4">
                 <h3 className="title title-simple text-left text-uppercase">
-                  Billing Details
+                  Booking Details
                 </h3>
                 <div className="row">
                   <div className="col-xs-6">
@@ -47,7 +47,7 @@ const CheckoutPage = () => {
                 </div>
 
                 <div className="row">
-                  <div className="col-xs-6">
+                  <div className="col-xs-12">
                     <label>Phone *</label>
                     <input
                       type="text"
@@ -58,7 +58,7 @@ const CheckoutPage = () => {
                     />
                   </div>
 
-                  <div className="col-xs-6">
+                  <div className="col-xs-12">
                     <label>Email Address *</label>
                     <input
                       type="text"
@@ -100,14 +100,14 @@ const CheckoutPage = () => {
                       <tbody>
                         <tr>
                           <td className="product-name">
-                            Moka Star
+                            Group trip on Shaqran Yacht in Jeddah sea
                             <span className="product-quantity">×&nbsp;2</span>
                           </td>
                           <td className="product-total text-body">$198.00</td>
                         </tr>
                         <tr>
                           <td className="product-name">
-                            Moka Star
+                            Group trip on Shaqran Yacht in Jeddah sea
                             <span className="product-quantity">×&nbsp;17</span>
                           </td>
                           <td className="product-total text-body">$935.00</td>
