@@ -30,10 +30,6 @@ function MainMenu() {
                     <ALink href={ `/blog/classic` }>Blog</ALink>
                 </li>
 
-                <li className={ `${ pathname.includes( '/elements' ) ? 'active' : '' } d-xl-show` }>
-                    <ALink href={ `/elements` }>Elements</ALink>
-                </li>
-
                 <li>
                     <ALink href="/pages/about-us">About Us</ALink>
                 </li>
