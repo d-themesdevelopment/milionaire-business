@@ -81,7 +81,7 @@ const CartPage = () => {
                       <span className="amount">$198.00</span>
                     </td>
                     <td className="product-close">
-                      <a className="product-remove" href="/cart/#">
+                      <a className="product-remove" href="#">
                         <i className="fas fa-times"></i>
                       </a>
                     </td>
@@ -89,12 +89,12 @@ const CartPage = () => {
                 </tbody>
               </table>
               <div className="cart-actions mb-6 pt-4">
-                <a
+                <ALink
                   className="btn btn-dark btn-md btn-rounded btn-icon-left mr-4 mb-4"
-                  href="/shop/"
+                  href="/shop"
                 >
                   <i className="d-icon-arrow-left"></i>Continue Shopping
-                </a>
+                </ALink>
                 <button
                   type="submit"
                   className="btn btn-outline btn-dark btn-md btn-rounded  btn-disabled"
