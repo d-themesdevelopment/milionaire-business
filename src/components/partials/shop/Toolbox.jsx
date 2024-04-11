@@ -4,7 +4,7 @@ export default function ToolBox(props) {
       <div class="toolbox-left">
         <a
           class="toolbox-item left-sidebar-toggle btn btn-outline btn-primary btn-rounded btn-sm btn-icon-right d-lg-none"
-          href="/shop/#"
+          href="#"
         >
           Filter<i class="d-icon-arrow-right"></i>
         </a>
@@ -36,11 +36,11 @@ export default function ToolBox(props) {
         <div class="toolbox-item toolbox-layout ">
           <a
             class="d-icon-mode-list btn-layout "
-            href="/shop/?type=list"
+            href="#"
           ></a>
           <a
             className="d-icon-mode-grid btn-layout active"
-            href="/shop/?type=grid"
+            href="#"
           ></a>
         </div>
       </div>

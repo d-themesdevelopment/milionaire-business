@@ -246,25 +246,25 @@ function ProductListOne(props) {
           <li className="page-item disabled">
             <a
               className="page-link page-link-prev"
-              href="/shop/#"
+              href="#"
             >
               <i className="d-icon-arrow-left"></i>Prev
             </a>
           </li>
           <li className="page-item active">
-            <a className="page-link" href="/shop/#">
+            <a className="page-link" href="#">
               1<span className="sr-only">(current)</span>
             </a>
           </li>
           <li className="page-item ">
-            <a className="page-link" href="/shop/?page=2">
+            <a className="page-link" href="#">
               2
             </a>
           </li>
           <li className="page-item ">
             <a
               className="page-link page-link-next"
-              href="/shop/?page=2"
+              href="#"
             >
               Next<i className="d-icon-arrow-right"></i>
             </a>

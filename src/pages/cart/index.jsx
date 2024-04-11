@@ -39,7 +39,7 @@ const CartPage = () => {
                   <tr>
                     <td className="product-thumbnail">
                       <figure>
-                        <a href="/product/default/best-dark-blue-pedestrian-bag/">
+                        <a href="#">
                           <img
                             src="./images/home/products/product1.jpg"
                             width="100"

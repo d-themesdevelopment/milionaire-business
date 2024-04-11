@@ -60,7 +60,7 @@ export default function Header(props) {
             </div>
 
             <span className="divider"></span>
-            <ALink href="/contact-us" className="contact d-lg-show">
+            <ALink href="#" className="contact d-lg-show">
               <i className="d-icon-map"></i>Contact
             </ALink>
             <ALink href="#" className="help d-lg-show">
