@@ -1,38 +1,63 @@
-// import Accordion from "@/components/features/accordion/Accordion";
-// import Card from "@/components/features/accordion/Card";
 import TestimonialOne from "@/components/features/testimonials/TestimonialOne";
 import RelatedBooking from "@/components/partials/Booking/RelatedBooking";
+import { Collapse } from "antd";
 import { useState } from "react";
 import DatePicker from "react-datepicker";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Collapse, Select } from "antd";
+
+const text = `
+A dog is a type of domesticated animal.
+Known for its loyalty and faithfulness,
+it can be found as a welcome guest in many households across the world.
+`;
+
+const items = [
+  {
+    key: "1",
+    label: "Activities you can do on Bayda island: ",
+    children: <p>{text}</p>,
+  },
+  {
+    key: "2",
+    label: "Package includes",
+    children: <p>{text}</p>,
+  },
+  {
+    key: "3",
+    label: "Notes",
+    children: <p>{text}</p>,
+  },
+  {
+    key: "4",
+    label: "Policies",
+    children: <p>{text}</p>,
+  },
+  {
+    key: "5",
+    label: "How to book with Ootlah",
+    children: <p>{text}</p>,
+  },
+  {
+    key: "6",
+    label: "Location",
+    children: (
+      <div className="google-map">
+        <img src="./images/map.png" width={761} height={300} alt="Map" />
+        <img
+          src="./images/map-picker.png"
+          className="map-picker"
+          width={36}
+          height={57}
+          alt="Map"
+        />
+      </div>
+    ),
+  },
+];
 
 const BookingPage = () => {
   const [date, setDate] = useState();
-
-  const text = `
-  A dog is a type of domesticated animal.
-  Known for its loyalty and faithfulness,
-  it can be found as a welcome guest in many households across the world.
-`;
-  const items = [
-    {
-      key: "1",
-      label: "This is panel header 1",
-      children: <p>{text}</p>,
-    },
-    {
-      key: "2",
-      label: "This is panel header 2",
-      children: <p>{text}</p>,
-    },
-    {
-      key: "3",
-      label: "This is panel header 3",
-      children: <p>{text}</p>,
-    },
-  ];
 
   const handleChangeDate = (date) => {
     setDate(date);
@@ -44,6 +69,8 @@ const BookingPage = () => {
 
   return (
     <main className="booking mt-6 mb-6">
+      {/* <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} /> */}
+
       <div className="container">
         <div className="product-single row">
           <div className="col-12 col-lg-8">
@@ -422,83 +449,6 @@ const BookingPage = () => {
               </Swiper>
 
               <div className="mt-10 "></div>
-              <Collapse
-                items={items}
-                defaultActiveKey={["1"]}
-                onChange={onChange}
-              />
-              {/* <Accordion adClass="accordion-simple">
-                <Card
-                  title="Activities you can do on Bayda island:"
-                  adClass="border-no"
-                >
-                  <p className="mb-0">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Donec odio. Quisque volutpat mattis eros. Nullam malesuada
-                    erat ut turpis. Suspendisse urna nibh, viverra non, semper
-                    suscipit, posuere a, pede. Donec nec justo eget felis
-                    facilisis fermentum.
-                  </p>
-                </Card>
-
-                <Card title="Package includes">
-                  <p className="mb-0">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Donec odio. Quisque volutpat mattis eros. Nullam malesuada
-                    erat ut turpis. Suspendisse urna nibh, viverra non, semper
-                    suscipit, posuere a, pede. Donec nec justo eget felis
-                    facilisis fermentum.
-                  </p>
-                </Card>
-
-                <Card title="Notes">
-                  <p className="mb-0">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Donec odio. Quisque volutpat mattis eros. Nullam malesuada
-                    erat ut turpis. Suspendisse urna nibh, viverra non, semper
-                    suscipit, posuere a, pede. Donec nec justo eget felis
-                    facilisis fermentum.
-                  </p>
-                </Card>
-
-                <Card title="Policies">
-                  <p className="mb-0">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Donec odio. Quisque volutpat mattis eros. Nullam malesuada
-                    erat ut turpis. Suspendisse urna nibh, viverra non, semper
-                    suscipit, posuere a, pede. Donec nec justo eget felis
-                    facilisis fermentum.
-                  </p>
-                </Card>
-
-                <Card title="How to book with Ootlah">
-                  <p className="mb-0">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Donec odio. Quisque volutpat mattis eros. Nullam malesuada
-                    erat ut turpis. Suspendisse urna nibh, viverra non, semper
-                    suscipit, posuere a, pede. Donec nec justo eget felis
-                    facilisis fermentum.
-                  </p>
-                </Card>
-
-                <Card title="Location" expanded={true}>
-                  <div className="google-map">
-                    <img
-                      src="./images/map.png"
-                      width={761}
-                      height={300}
-                      alt="Map"
-                    />
-                    <img
-                      src="./images/map-picker.png"
-                      className="map-picker"
-                      width={36}
-                      height={57}
-                      alt="Map"
-                    />
-                  </div>
-                </Card>
-              </Accordion> */}
             </div>
           </div>
 

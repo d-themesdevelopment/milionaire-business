@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import ALink from "@/components/features/CustomLink";
 // import Card from "@/components/features/accordion/Card";
 
-import SlideToggle from "react-slide-toggle";
+// import SlideToggle from "react-slide-toggle";
 
 import filterData from "@/utils/data/shop";
 import { scrollTopHandler } from "@/utils";
@@ -12,8 +12,7 @@ import { scrollTopHandler } from "@/utils";
 function SidebarFilterOne(props) {
   const { type = "left", isFeatured = false } = props;
 
-
-  const [ filterPrice, setPrice ] = useState( {min: 10, max: 700} );
+  const [filterPrice, setPrice] = useState({ min: 10, max: 700 });
 
   useEffect(() => {
     window.addEventListener("resize", hideSidebar);
@@ -130,6 +129,100 @@ function SidebarFilterOne(props) {
                 </li>
               </ul>
             </Card> */}
+            <div class="widget widget-collapsible">
+              <a
+                class="parse-content expanded"
+                href="/react/riode/demo-1/shop/#"
+              >
+                <h3 class="widget-title">
+                  All Categories
+                  <span class="toggle-btn p-0 parse-content"></span>
+                </h3>
+              </a>
+              <div class="overflow-hidden" style={{ overflow: "hidden" }}>
+                <ul class="widget-body filter-items search-ul">
+                  <li class="">
+                    <a href="/react/riode/demo-1/shop/?category=cosmetic&amp;grid=&amp;type=">
+                      Cosmetic
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/react/riode/demo-1/shop/?category=fashionable-women-s&amp;grid=&amp;type=">
+                      Fashionable Womens
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/react/riode/demo-1/shop/?category=for-men-s&amp;grid=&amp;type=">
+                      For Mens
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="widget widget-collapsible">
+            <a class="parse-content expanded" href="/react/riode/demo-1/shop/#">
+              <h3 class="widget-title">
+                Size<span class="toggle-btn p-0 parse-content"></span>
+              </h3>
+            </a>
+            <div class="overflow-hidden" style={{ overflow: "hidden" }}>
+              <ul class="widget-body filter-items">
+                <li class="">
+                  <a href="/react/riode/demo-1/shop/?page=1&amp;sizes=xl&amp;type=">
+                    Extra Large
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/react/riode/demo-1/shop/?page=1&amp;sizes=l&amp;type=">
+                    Large
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/react/riode/demo-1/shop/?page=1&amp;sizes=m&amp;type=">
+                    Medium
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/react/riode/demo-1/shop/?page=1&amp;sizes=s&amp;type=">
+                    Small
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="widget widget-collapsible">
+            <a class="parse-content expanded" href="/react/riode/demo-1/shop/#">
+              <h3 class="widget-title">
+                Color<span class="toggle-btn p-0 parse-content"></span>
+              </h3>
+            </a>
+            <div class="overflow-hidden" style={{ overflow: "hidden" }}>
+              <ul class="widget-body filter-items">
+                <li class="">
+                  <a href="/react/riode/demo-1/shop/?page=1&amp;colors=black&amp;type=">
+                    Black
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/react/riode/demo-1/shop/?page=1&amp;colors=blue&amp;type=">
+                    Blue
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/react/riode/demo-1/shop/?page=1&amp;colors=brown&amp;type=">
+                    Brown
+                  </a>
+                </li>
+                <li class="">
+                  <a href="/react/riode/demo-1/shop/?page=1&amp;colors=green&amp;type=">
+                    Green
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* <div className="widget widget-collapsible">
