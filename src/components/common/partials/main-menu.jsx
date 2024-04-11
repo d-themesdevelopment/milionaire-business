@@ -22,8 +22,8 @@ function MainMenu() {
                     <ALink href="/product/default/fashionable-leather-satchel">Products</ALink>
                 </li>
 
-                <li className={ `${ pathname.includes( '/pages' ) ? 'active' : '' }` }>
-                    <ALink href="#">Pages</ALink>
+                <li className={ `${ pathname.includes( '/cart' ) ? 'active' : '' }` }>
+                    <ALink href="/cart">Cart</ALink>
                 </li>
 
                 <li className={ `${ pathname.includes( '/blog' ) && !pathname.includes( '/elements' ) ? 'active' : '' }` }>
