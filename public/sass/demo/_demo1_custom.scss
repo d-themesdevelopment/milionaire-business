@@ -472,3 +472,18 @@ footer .social-links > a {
     z-index: 10001;
   }
 }
+
+.text-md {
+  font-size: 16px;
+}
+
+.product-wrap {
+  .product-name,
+  .product-total {
+    padding-top: 2rem;
+  }
+
+  .product-name {
+    white-space: normal;
+  }
+}

@@ -246,25 +246,25 @@ function ProductListOne(props) {
           <li className="page-item disabled">
             <a
               className="page-link page-link-prev"
-              href="/react/riode/demo-1/shop/#"
+              href="/shop/#"
             >
               <i className="d-icon-arrow-left"></i>Prev
             </a>
           </li>
           <li className="page-item active">
-            <a className="page-link" href="/react/riode/demo-1/shop/#">
+            <a className="page-link" href="/shop/#">
               1<span className="sr-only">(current)</span>
             </a>
           </li>
           <li className="page-item ">
-            <a className="page-link" href="/react/riode/demo-1/shop/?page=2">
+            <a className="page-link" href="/shop/?page=2">
               2
             </a>
           </li>
           <li className="page-item ">
             <a
               className="page-link page-link-next"
-              href="/react/riode/demo-1/shop/?page=2"
+              href="/shop/?page=2"
             >
               Next<i className="d-icon-arrow-right"></i>
             </a>

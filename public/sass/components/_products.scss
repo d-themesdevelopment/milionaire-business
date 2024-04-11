@@ -441,7 +441,7 @@
 // Product Name
 .product-name {
     @include print_css( product, name );
-    white-space: nowrap;
+    // white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     a {

@@ -132,7 +132,7 @@ function SidebarFilterOne(props) {
             <div class="widget widget-collapsible">
               <a
                 class="parse-content expanded"
-                href="/react/riode/demo-1/shop/#"
+                href="/shop/#"
               >
                 <h3 class="widget-title">
                   All Categories
@@ -142,17 +142,17 @@ function SidebarFilterOne(props) {
               <div class="overflow-hidden" style={{ overflow: "hidden" }}>
                 <ul class="widget-body filter-items search-ul">
                   <li class="">
-                    <a href="/react/riode/demo-1/shop/?category=cosmetic&amp;grid=&amp;type=">
+                    <a href="/shop/?category=cosmetic&amp;grid=&amp;type=">
                       Cosmetic
                     </a>
                   </li>
                   <li class="">
-                    <a href="/react/riode/demo-1/shop/?category=fashionable-women-s&amp;grid=&amp;type=">
+                    <a href="/shop/?category=fashionable-women-s&amp;grid=&amp;type=">
                       Fashionable Womens
                     </a>
                   </li>
                   <li class="">
-                    <a href="/react/riode/demo-1/shop/?category=for-men-s&amp;grid=&amp;type=">
+                    <a href="/shop/?category=for-men-s&amp;grid=&amp;type=">
                       For Mens
                     </a>
                   </li>
@@ -162,7 +162,7 @@ function SidebarFilterOne(props) {
           </div>
 
           <div class="widget widget-collapsible">
-            <a class="parse-content expanded" href="/react/riode/demo-1/shop/#">
+            <a class="parse-content expanded" href="/shop/#">
               <h3 class="widget-title">
                 Size<span class="toggle-btn p-0 parse-content"></span>
               </h3>
@@ -170,22 +170,22 @@ function SidebarFilterOne(props) {
             <div class="overflow-hidden" style={{ overflow: "hidden" }}>
               <ul class="widget-body filter-items">
                 <li class="">
-                  <a href="/react/riode/demo-1/shop/?page=1&amp;sizes=xl&amp;type=">
+                  <a href="/shop/?page=1&amp;sizes=xl&amp;type=">
                     Extra Large
                   </a>
                 </li>
                 <li class="">
-                  <a href="/react/riode/demo-1/shop/?page=1&amp;sizes=l&amp;type=">
+                  <a href="/shop/?page=1&amp;sizes=l&amp;type=">
                     Large
                   </a>
                 </li>
                 <li class="">
-                  <a href="/react/riode/demo-1/shop/?page=1&amp;sizes=m&amp;type=">
+                  <a href="/shop/?page=1&amp;sizes=m&amp;type=">
                     Medium
                   </a>
                 </li>
                 <li class="">
-                  <a href="/react/riode/demo-1/shop/?page=1&amp;sizes=s&amp;type=">
+                  <a href="/shop/?page=1&amp;sizes=s&amp;type=">
                     Small
                   </a>
                 </li>
@@ -194,7 +194,7 @@ function SidebarFilterOne(props) {
           </div>
 
           <div class="widget widget-collapsible">
-            <a class="parse-content expanded" href="/react/riode/demo-1/shop/#">
+            <a class="parse-content expanded" href="/shop/#">
               <h3 class="widget-title">
                 Color<span class="toggle-btn p-0 parse-content"></span>
               </h3>
@@ -202,22 +202,22 @@ function SidebarFilterOne(props) {
             <div class="overflow-hidden" style={{ overflow: "hidden" }}>
               <ul class="widget-body filter-items">
                 <li class="">
-                  <a href="/react/riode/demo-1/shop/?page=1&amp;colors=black&amp;type=">
+                  <a href="/shop/?page=1&amp;colors=black&amp;type=">
                     Black
                   </a>
                 </li>
                 <li class="">
-                  <a href="/react/riode/demo-1/shop/?page=1&amp;colors=blue&amp;type=">
+                  <a href="/shop/?page=1&amp;colors=blue&amp;type=">
                     Blue
                   </a>
                 </li>
                 <li class="">
-                  <a href="/react/riode/demo-1/shop/?page=1&amp;colors=brown&amp;type=">
+                  <a href="/shop/?page=1&amp;colors=brown&amp;type=">
                     Brown
                   </a>
                 </li>
                 <li class="">
-                  <a href="/react/riode/demo-1/shop/?page=1&amp;colors=green&amp;type=">
+                  <a href="/shop/?page=1&amp;colors=green&amp;type=">
                     Green
                   </a>
                 </li>

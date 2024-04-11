@@ -375,7 +375,7 @@ export const headerBorderRemoveList = [
     "/shop/off-canvas-filter",
     "/shop/right-sidebar",
     "/shop/grid/[grid]",
-    "/pages/404",
+    "/404",
     "/elements",
     "/elements/products",
     "/elements/typography",

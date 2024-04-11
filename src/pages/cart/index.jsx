@@ -39,7 +39,7 @@ const CartPage = () => {
                   <tr>
                     <td className="product-thumbnail">
                       <figure>
-                        <a href="/react/riode/demo-1/product/default/best-dark-blue-pedestrian-bag/">
+                        <a href="/product/default/best-dark-blue-pedestrian-bag/">
                           <img
                             src="./images/home/products/product1.jpg"
                             width="100"
@@ -51,9 +51,7 @@ const CartPage = () => {
                     </td>
                     <td className="product-name">
                       <div className="product-name-section">
-                        <a href="#">
-                          Moka Star
-                        </a>
+                        <a href="#">Moka Star</a>
                       </div>
                     </td>
                     <td className="product-subtotal">
@@ -83,10 +81,7 @@ const CartPage = () => {
                       <span className="amount">$198.00</span>
                     </td>
                     <td className="product-close">
-                      <a
-                        className="product-remove"
-                        href="/react/riode/demo-1/pages/cart/#"
-                      >
+                      <a className="product-remove" href="/cart/#">
                         <i className="fas fa-times"></i>
                       </a>
                     </td>
@@ -96,7 +91,7 @@ const CartPage = () => {
               <div className="cart-actions mb-6 pt-4">
                 <a
                   className="btn btn-dark btn-md btn-rounded btn-icon-left mr-4 mb-4"
-                  href="/react/riode/demo-1/shop/"
+                  href="/shop/"
                 >
                   <i className="d-icon-arrow-left"></i>Continue Shopping
                 </a>
@@ -138,6 +133,21 @@ const CartPage = () => {
                   <h3 className="summary-title text-left">Cart Totals</h3>
                   <table className="shipping">
                     <tbody>
+                      <tr className="product-wrap">
+                        <td className="product-name">
+                          Group trip on Shaqran Yacht in Jeddah sea
+                          <span className="product-quantity">×&nbsp;2</span>
+                        </td>
+                        <td className="product-total text-body">$198.00</td>
+                      </tr>
+                      <tr>
+                        <td className="product-name">
+                          Group trip on Shaqran Yacht in Jeddah sea
+                          <span className="product-quantity">×&nbsp;17</span>
+                        </td>
+                        <td className="product-total text-body">$935.00</td>
+                      </tr>
+
                       <tr className="summary-subtotal">
                         <td>
                           <h4 className="summary-subtitle">Subtotal</h4>
@@ -146,119 +156,9 @@ const CartPage = () => {
                           <p className="summary-subtotal-price">$1,133.00</p>
                         </td>
                       </tr>
-                      <tr className="sumnary-shipping shipping-row-last">
-                        <td colSpan="2">
-                          <h4 className="summary-subtitle">
-                            Calculate Shipping
-                          </h4>
-                          <ul>
-                            <li>
-                              <div className="custom-radio">
-                                <input
-                                  type="radio"
-                                  id="flat_rate"
-                                  name="shipping"
-                                  className="custom-control-input"
-                                  checked=""
-                                />
-                                <label
-                                  className="custom-control-label"
-                                  for="flat_rate"
-                                >
-                                  Flat rate
-                                </label>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="custom-radio">
-                                <input
-                                  type="radio"
-                                  id="free-shipping"
-                                  name="shipping"
-                                  className="custom-control-input"
-                                />
-                                <label
-                                  className="custom-control-label"
-                                  for="free-shipping"
-                                >
-                                  Free shipping
-                                </label>
-                              </div>
-                            </li>
-                            <li>
-                              <div className="custom-radio">
-                                <input
-                                  type="radio"
-                                  id="local_pickup"
-                                  name="shipping"
-                                  className="custom-control-input"
-                                />
-                                <label
-                                  className="custom-control-label"
-                                  for="local_pickup"
-                                >
-                                  Local pickup
-                                </label>
-                              </div>
-                            </li>
-                          </ul>
-                        </td>
-                      </tr>
                     </tbody>
                   </table>
-                  <div className="shipping-address">
-                    <label>
-                      Shipping to <strong>CA.</strong>
-                    </label>
-                    <div className="select-box">
-                      <select
-                        name="country"
-                        className="form-control"
-                        fdprocessedid="odzurx"
-                      >
-                        <option value="us" selected="">
-                          United States (US)
-                        </option>
-                        <option value="uk"> United Kingdom</option>
-                        <option value="fr">France</option>
-                        <option value="aus">Austria</option>
-                      </select>
-                    </div>
-                    <div className="select-box">
-                      <select
-                        name="country"
-                        className="form-control"
-                        fdprocessedid="3pqv7p"
-                      >
-                        <option value="us" selected="">
-                          California
-                        </option>
-                        <option value="uk">Alaska</option>
-                        <option value="fr">Delaware</option>
-                        <option value="aus">Hawaii</option>
-                      </select>
-                    </div>
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="code"
-                      placeholder="Town / City"
-                      fdprocessedid="38zxd6"
-                    />
-                    <input
-                      type="text"
-                      className="form-control"
-                      name="code"
-                      placeholder="ZIP"
-                      fdprocessedid="ck3pgx"
-                    />
-                    <a
-                      className="btn btn-md btn-dark btn-rounded btn-outline"
-                      href="/react/riode/demo-1/pages/cart/#"
-                    >
-                      Update totals
-                    </a>
-                  </div>
+
                   <table className="total">
                     <tbody>
                       <tr className="summary-subtotal">
@@ -271,12 +171,12 @@ const CartPage = () => {
                       </tr>
                     </tbody>
                   </table>
-                  <a
+                  <ALink
                     className="btn btn-dark btn-rounded btn-checkout"
-                    href="/react/riode/demo-1/pages/checkout/"
+                    href="/checkout/"
                   >
                     Proceed to checkout
-                  </a>
+                  </ALink>
                 </div>
               </div>
             </aside>

@@ -60,7 +60,7 @@ export default function Header(props) {
             </div>
 
             <span className="divider"></span>
-            <ALink href="/pages/contact-us" className="contact d-lg-show">
+            <ALink href="/contact-us" className="contact d-lg-show">
               <i className="d-icon-map"></i>Contact
             </ALink>
             <ALink href="#" className="help d-lg-show">
@@ -100,7 +100,7 @@ export default function Header(props) {
               </div>
             </ALink>
             <span className="divider"></span>
-            <ALink href="/pages/wishlist" className="wishlist">
+            <ALink href="/wishlist" className="wishlist">
               <i className="d-icon-heart"></i>
             </ALink>
             <span className="divider"></span>

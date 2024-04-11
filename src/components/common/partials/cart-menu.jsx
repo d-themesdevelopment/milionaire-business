@@ -117,14 +117,14 @@ function CartMenu(props) {
 
             <div className="cart-action">
               <ALink
-                href="/pages/cart"
+                href="/cart"
                 className="btn btn-dark btn-link"
                 onClick={hideCartMenu}
               >
                 View Cart
               </ALink>
               <ALink
-                href="/pages/checkout"
+                href="/checkout"
                 className="btn btn-dark"
                 onClick={hideCartMenu}
               >

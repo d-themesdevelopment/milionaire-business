@@ -113,14 +113,14 @@ function MobileMenu(props) {
           </li>
 
           <li>
-            {/* <ALink href={"/pages/account"}>Login</ALink> */}
+            {/* <ALink href={"/account"}>Login</ALink> */}
             <LoginModal />
           </li>
           <li>
-            <ALink href={"/pages/cart"}>My Cart</ALink>
+            <ALink href={"/cart"}>My Cart</ALink>
           </li>
           <li>
-            <ALink href={"/pages/wishlist"}>Wishlist</ALink>
+            <ALink href={"/"}>Wishlist</ALink>
           </li>
         </ul>
       </div>

@@ -27,11 +27,11 @@ function MainMenu() {
                 </li>
 
                 <li className={ `${ pathname.includes( '/blog' ) && !pathname.includes( '/elements' ) ? 'active' : '' }` }>
-                    <ALink href={ `/blog/classic` }>Blog</ALink>
+                    <ALink href={ `/` }>Blog</ALink>
                 </li>
 
                 <li>
-                    <ALink href="/pages/about-us">About Us</ALink>
+                    <ALink href="/">About Us</ALink>
                 </li>
             </ul>
         </nav>
