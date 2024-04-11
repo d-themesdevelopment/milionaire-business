@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import InputRange from "react-input-range";
+// import InputRange from "react-input-range";
 
 import ALink from "@/components/features/CustomLink";
 import Card from "@/components/features/accordion/Card";
@@ -132,7 +132,7 @@ function SidebarFilterOne(props) {
             </Card>
           </div>
 
-          <div className="widget widget-collapsible">
+          {/* <div className="widget widget-collapsible">
             <Card
               title="<h3 class='widget-title'>Filter by Price<span class='toggle-btn p-0 parse-content'></span></h3>"
               type="parse"
@@ -164,7 +164,7 @@ function SidebarFilterOne(props) {
                 </form>
               </div>
             </Card>
-          </div>
+          </div> */}
 
           <div className="widget widget-collapsible">
             <Card
