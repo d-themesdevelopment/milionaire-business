@@ -2,12 +2,7 @@ import { useEffect, useState } from "react";
 // import InputRange from "react-input-range";
 
 import ALink from "@/components/features/CustomLink";
-// import Card from "@/components/features/accordion/Card";
-
-// import SlideToggle from "react-slide-toggle";
-
-import filterData from "@/utils/data/shop";
-import { scrollTopHandler } from "@/utils";
+import { Slider } from "antd";
 
 function SidebarFilterOne(props) {
   const { type = "left", isFeatured = false } = props;
@@ -81,6 +76,7 @@ function SidebarFilterOne(props) {
       );
   };
 
+
   return (
     <aside
       className={`col-lg-3 shop-sidebar skeleton-body sidebar-fixed sticky-sidebar-wrapper sidebar-toggle-remain sidebar`}
@@ -111,52 +107,58 @@ function SidebarFilterOne(props) {
             </ALink>
           </div>
 
-          <div className="widget widget-collapsible">
-            {/* <Card
-              title="<h3 class='widget-title'>All Categories<span class='toggle-btn p-0 parse-content'></span></h3>"
-              type="parse"
-              expanded={true}
-            >
-              <ul className="widget-body filter-items search-ul">
-                <li className="">
-                  <a href="#">Cosmetic</a>
+          <div class="widget widget-collapsible">
+            <a class="parse-content expanded" href="/shop/#">
+              <h3 class="widget-title">
+                All Categories
+                <span class="toggle-btn p-0 parse-content"></span>
+              </h3>
+            </a>
+            <div class="overflow-hidden" style={{ overflow: "hidden" }}>
+              <ul class="widget-body filter-items search-ul">
+                <li class="">
+                  <a href="/shop/?category=cosmetic&amp;grid=&amp;type=">
+                    Cosmetic
+                  </a>
                 </li>
-                <li className="">
-                  <a href="#">Fashionable</a>
+                <li class="">
+                  <a href="/shop/?category=fashionable-women-s&amp;grid=&amp;type=">
+                    Fashionable Womens
+                  </a>
                 </li>
-                <li className="">
-                  <a href="#">For Boat</a>
+                <li class="">
+                  <a href="/shop/?category=for-men-s&amp;grid=&amp;type=">
+                    For Mens
+                  </a>
                 </li>
               </ul>
-            </Card> */}
-            <div class="widget widget-collapsible">
-              <a
-                class="parse-content expanded"
-                href="/shop/#"
-              >
-                <h3 class="widget-title">
-                  All Categories
-                  <span class="toggle-btn p-0 parse-content"></span>
-                </h3>
-              </a>
-              <div class="overflow-hidden" style={{ overflow: "hidden" }}>
-                <ul class="widget-body filter-items search-ul">
-                  <li class="">
-                    <a href="/shop/?category=cosmetic&amp;grid=&amp;type=">
-                      Cosmetic
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="/shop/?category=fashionable-women-s&amp;grid=&amp;type=">
-                      Fashionable Womens
-                    </a>
-                  </li>
-                  <li class="">
-                    <a href="/shop/?category=for-men-s&amp;grid=&amp;type=">
-                      For Mens
-                    </a>
-                  </li>
-                </ul>
+            </div>
+          </div>
+
+          <div class="widget widget-collapsible">
+            <a class="parse-content expanded" href="#">
+              <h3 class="widget-title">
+                Filter by Price
+                <span class="toggle-btn p-0 parse-content"></span>
+              </h3>
+            </a>
+            <div class="overflow-hidden" style={{ overflow: "hidden" }}>
+              <div class="widget-body">
+                <form action="#">
+                  <Slider range defaultValue={[20, 50]} />
+
+                  <div class="filter-actions">
+                    <div class="filter-price-text mb-4">
+                      Price: $0 - $1000<span class="filter-price-range"></span>
+                    </div>
+                    <button
+                      class="btn btn-dark btn-filter btn-rounded"
+                      fdprocessedid="dwmmv"
+                    >
+                      Filter
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -170,24 +172,16 @@ function SidebarFilterOne(props) {
             <div class="overflow-hidden" style={{ overflow: "hidden" }}>
               <ul class="widget-body filter-items">
                 <li class="">
-                  <a href="/shop/?page=1&amp;sizes=xl&amp;type=">
-                    Extra Large
-                  </a>
+                  <a href="/shop/?page=1&amp;sizes=xl&amp;type=">Extra Large</a>
                 </li>
                 <li class="">
-                  <a href="/shop/?page=1&amp;sizes=l&amp;type=">
-                    Large
-                  </a>
+                  <a href="/shop/?page=1&amp;sizes=l&amp;type=">Large</a>
                 </li>
                 <li class="">
-                  <a href="/shop/?page=1&amp;sizes=m&amp;type=">
-                    Medium
-                  </a>
+                  <a href="/shop/?page=1&amp;sizes=m&amp;type=">Medium</a>
                 </li>
                 <li class="">
-                  <a href="/shop/?page=1&amp;sizes=s&amp;type=">
-                    Small
-                  </a>
+                  <a href="/shop/?page=1&amp;sizes=s&amp;type=">Small</a>
                 </li>
               </ul>
             </div>
@@ -202,97 +196,19 @@ function SidebarFilterOne(props) {
             <div class="overflow-hidden" style={{ overflow: "hidden" }}>
               <ul class="widget-body filter-items">
                 <li class="">
-                  <a href="/shop/?page=1&amp;colors=black&amp;type=">
-                    Black
-                  </a>
+                  <a href="/shop/?page=1&amp;colors=black&amp;type=">Black</a>
                 </li>
                 <li class="">
-                  <a href="/shop/?page=1&amp;colors=blue&amp;type=">
-                    Blue
-                  </a>
+                  <a href="/shop/?page=1&amp;colors=blue&amp;type=">Blue</a>
                 </li>
                 <li class="">
-                  <a href="/shop/?page=1&amp;colors=brown&amp;type=">
-                    Brown
-                  </a>
+                  <a href="/shop/?page=1&amp;colors=brown&amp;type=">Brown</a>
                 </li>
                 <li class="">
-                  <a href="/shop/?page=1&amp;colors=green&amp;type=">
-                    Green
-                  </a>
+                  <a href="/shop/?page=1&amp;colors=green&amp;type=">Green</a>
                 </li>
               </ul>
             </div>
-          </div>
-
-          {/* <div className="widget widget-collapsible">
-            <Card
-              title="<h3 class='widget-title'>Filter by Price<span class='toggle-btn p-0 parse-content'></span></h3>"
-              type="parse"
-              expanded={true}
-            >
-              <div className="widget-body">
-                <form action="#">
-                  <div className="filter-price-slider noUi-target noUi-ltr noUi-horizontal shop-input-range">
-                    <InputRange
-                      formatLabel={(value) => `$${value}`}
-                      maxValue={1000}
-                      minValue={0}
-                      step={50}
-                      value={filterPrice}
-                      onChange={onChangePrice}
-                    />
-                  </div>
-
-                  <div className="filter-actions">
-                    <div className="filter-price-text mb-4">
-                      Price: $0 - $1000
-                      <span className="filter-price-range"></span>
-                    </div>
-
-                    <button className="btn btn-dark btn-filter btn-rounded">
-                      Filter
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </Card>
-          </div> */}
-
-          <div className="widget widget-collapsible">
-            {/* <Card
-              title="<h3 class='widget-title'>Size<span class='toggle-btn p-0 parse-content'></span></h3>"
-              type="parse"
-              expanded={true}
-            >
-              <ul className="widget-body filter-items">
-                {filterData.sizes.map((item, index) => (
-                  <li key={item + " - " + index}>
-                    <ALink scroll={false} href={"/"}>
-                      {item.name}
-                    </ALink>
-                  </li>
-                ))}
-              </ul>
-            </Card> */}
-          </div>
-
-          <div className="widget widget-collapsible">
-            {/* <Card
-              title="<h3 class='widget-title'>Color<span class='toggle-btn p-0 parse-content'></span></h3>"
-              type="parse"
-              expanded={true}
-            >
-              <ul className="widget-body filter-items">
-                {filterData.colors.map((item, index) => (
-                  <li key={item + " - " + index}>
-                    <ALink scroll={false} href={"/"}>
-                      {item.name}
-                    </ALink>
-                  </li>
-                ))}
-              </ul>
-            </Card> */}
           </div>
         </div>
       </div>
