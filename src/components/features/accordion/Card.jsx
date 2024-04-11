@@ -19,13 +19,14 @@ export default function Card(props) {
       {({ onToggle, setCollapsibleElement, toggleState }) => (
         <div className={`card ${adClass}`}>
           <div className={`card-header`} onClick={onToggle}>
-            <ALink
+            <a
               href="#"
+              onClick={(e) => e.preventDefault()}
               className={`toggle-button ${toggleState.toLowerCase()}`}
             >
               {iconClass ? <i className={iconClass}></i> : ""}
               {title ? title : ""}
-            </ALink>
+            </a>
           </div>
 
           <div ref={setCollapsibleElement}>

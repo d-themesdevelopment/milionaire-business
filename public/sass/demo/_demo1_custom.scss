@@ -284,14 +284,13 @@ footer .social-links > a {
   padding: 6.4rem 0 7.3rem;
 }
 
-
 .input-range {
   position: relative;
 }
 
 .input-range__track--background {
   left: 0;
-  margin-top: -.15rem;
+  margin-top: -0.15rem;
   position: absolute;
   right: 0;
   top: 50%;
@@ -299,14 +298,14 @@ footer .social-links > a {
 
 .input-range__track {
   display: flex;
-    align-items: center;
+  align-items: center;
   background: #eee;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   cursor: pointer;
-  height: .3rem;
+  height: 0.3rem;
   position: relative;
-  -webkit-transition: left .3s ease-out, width .3s ease-out;
-  transition: left .3s ease-out, width .3s ease-out;
+  -webkit-transition: left 0.3s ease-out, width 0.3s ease-out;
+  transition: left 0.3s ease-out, width 0.3s ease-out;
 }
 
 .shop-input-range.noUi-target {
@@ -314,9 +313,142 @@ footer .social-links > a {
 }
 
 .input-range__slider-container {
-  transition: left .3s ease-out;
+  transition: left 0.3s ease-out;
 }
 
 .filter-actions {
   justify-content: end;
+}
+
+/* Booking form */
+.booking-form {
+  border-radius: 10px;
+  border: 1px solid #d4d4d4;
+
+  h5 {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  > div {
+    border-radius: 10px;
+  }
+
+  .details {
+    padding: 2rem;
+  }
+
+  .form-control {
+    border-radius: 6px;
+  }
+
+  .date-picker {
+    position: relative;
+
+    .icon {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      width: 20px;
+      height: 20px;
+    }
+    .react-datepicker-wrapper {
+      width: 100%;
+    }
+
+    input {
+      border: 1px solid #e1e1e1;
+      border-radius: 6px;
+      height: 45px;
+      width: 100%;
+      padding: 0 2rem;
+    }
+  }
+
+
+  .btn {
+    padding: 1.2rem 2rem;
+    text-transform: capitalize;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.text-red {
+  color: #f62e47;
+}
+
+.text-yellow {
+  color: #ffc53c;
+}
+
+.booking {
+  .rating-bg {
+    font-size: 26px;
+
+    .ratings::before {
+      color: #ffc53c;
+    }
+  }
+
+  .review {
+    padding: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f6f6f6;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: #26c;
+    }
+  }
+
+  .google-map {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img:not(.map-picker) {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .map-picker {
+      position: absolute;;
+    }
+  }
+  
+  .book-box {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0 rgb(0 0 0 / 11%);
+
+    .btn-red {
+      padding: 1.5rem 0;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+}
+
+.text-sm {
+  font-size: 12px;
+}
+
+.btn-red {
+  background-color: #f62e47;
+  border-color: #f62e47;
+}
+
+.btn-yellow {
+  background-color: #ffc53c;
+  border-color: #ffc53c;
 }

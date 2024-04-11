@@ -216,9 +216,9 @@
     .ratings-full {
         margin-top: -2px;
     }
-    .ratings::before {
-        @include css(color, product-single, rating, color);
-    }
+    // .ratings::before {
+    //     @include css(color, product-single, rating, color);
+    // }
     label {
         @include css(color, product-single, label, color);
         font-weight: 600;
