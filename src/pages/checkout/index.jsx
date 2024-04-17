@@ -1,9 +1,40 @@
 import ALink from "@/components/features/CustomLink";
+import { useEffect, useState } from "react";
+// import addCurrentLocation from "google-maps-current-location";
+import GoogleMapReact from "google-map-react";
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const CheckoutPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const asyncFn = async () => {
+      const mapEl = document.getElementById("map");
+      const { Map } = await window.google.maps.importLibrary("maps");
+
+      if (!mapEl) {
+        throw new Error("Cannot get map element");
+      }
+
+      const map = new Map(document.getElementById("map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+      });
+
+      // addCurrentLocation(map);
+    };
+
+    asyncFn();
+  }, []);
+
+  const onChange = (key) => {
+    console.log(key);
+  };
+
   return (
     <main className="main checkout">
-      <h1 className="d-none">Riode React eCommerce Template - Checkout</h1>
+      <h1 className="d-none">React eCommerce Template - Checkout</h1>
       <div className="page-content pt-7 pb-10 mb-10">
         <div className="step-by pr-4 pl-4">
           <h3 className="title title-simple title-step">
@@ -21,7 +52,7 @@ const CheckoutPage = () => {
             <div className="row">
               <div className="col-lg-7 mb-6 mb-lg-0 pr-lg-4">
                 <h3 className="title title-simple text-left text-uppercase">
-                  Booking Details
+                  Billing Details
                 </h3>
                 <div className="row">
                   <div className="col-xs-6">
@@ -46,18 +77,85 @@ const CheckoutPage = () => {
                   </div>
                 </div>
 
+                <label>Company Name (Optional)</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="company-name"
+                  required
+                />
+                <label>Country / Region *</label>
+                <div className="select-box">
+                  <select
+                    name="country"
+                    className="form-control"
+                    defaultValue="us"
+                  >
+                    <option value="us">United States (US)</option>
+                    <option value="uk"> United Kingdom</option>
+                    <option value="fr">France</option>
+                    <option value="aus">Austria</option>
+                  </select>
+                </div>
+
+                <label>Street Address *</label>
+                <input
+                  type="text"
+                  className="form-control"
+                  name="address1"
+                  required
+                  placeholder="House number and street name"
+                />
+                <input
+                  type="text"
+                  className="form-control"
+                  name="address2"
+                  required
+                  placeholder="Apartment, suite, unit, etc. (optional)"
+                />
+
                 <div className="row">
-                  <div className="col-xs-12">
+                  <div className="col-xs-6">
+                    <label>Town / City *</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="city"
+                      required
+                    />
+                  </div>
+                  <div className="col-xs-6">
+                    <label>State *</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="state"
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-xs-6">
+                    <label>ZIP *</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="zip"
+                      required
+                    />
+                  </div>
+                  <div className="col-xs-6">
                     <label>Phone *</label>
                     <input
                       type="text"
                       className="form-control"
                       name="phone"
-                      required=""
-                      fdprocessedid="3nyetl"
+                      required
                     />
                   </div>
+                </div>
 
+                <div className="row">
                   <div className="col-xs-12">
                     <label>Email Address *</label>
                     <input
@@ -68,6 +166,151 @@ const CheckoutPage = () => {
                       fdprocessedid="f8e4km"
                     />
                   </div>
+                </div>
+
+                <div className="row">
+                  <div className="col-xs-12">
+                    <label>Delivery Location *</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="email-address"
+                      required=""
+                      fdprocessedid="f8e4km"
+                    />
+                  </div>
+                </div>
+
+                <div style={{ width: "100%", height: "400px" }} id="map">
+                  <GoogleMapReact
+                    bootstrapURLKeys={{
+                      key: "AIzaSyBgVsModMpsR59_OIK-2sEcmhBBkW4xUuw",
+                    }}
+                    defaultCenter={{ lat: 59.95, lng: 30.33 }}
+                    defaultZoom={11}
+                  >
+                    <AnyReactComponent
+                      lat={59.955413}
+                      lng={30.337844}
+                      text="My Marker"
+                    />
+                  </GoogleMapReact>
+                </div>
+
+                <div className="form-checkbox mb-6 mt-5">
+                  <input
+                    type="checkbox"
+                    className="custom-checkbox"
+                    id="different-address"
+                    name="different-address"
+                    onChange={() => setIsOpen(!isOpen)}
+                  />
+                  <label
+                    className="form-control-label ls-s"
+                    htmlFor="different-address"
+                  >
+                    Ship to a different address?
+                  </label>
+
+                  {isOpen && (
+                    <div style={{ overflow: "hidden" }}>
+                      <div className="row pt-4">
+                        <div className="col-xs-6">
+                          <label>First Name *</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="first-name"
+                            required
+                          />
+                        </div>
+                        <div className="col-xs-6">
+                          <label>Last Name *</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="last-name"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <label>Company Name (Optional)</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="company-name"
+                        required
+                      />
+                      <label>Country / Region *</label>
+                      <div className="select-box">
+                        <select
+                          name="country"
+                          className="form-control"
+                          defaultValue="us"
+                        >
+                          <option value="us">United States (US)</option>
+                          <option value="uk"> United Kingdom</option>
+                          <option value="fr">France</option>
+                          <option value="aus">Austria</option>
+                        </select>
+                      </div>
+                      <label>Street Address *</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="address1"
+                        required
+                        placeholder="House number and street name"
+                      />
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="address2"
+                        required
+                        placeholder="Apartment, suite, unit, etc. (optional)"
+                      />
+                      <div className="row">
+                        <div className="col-xs-6">
+                          <label>Town / City *</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="city"
+                            required
+                          />
+                        </div>
+                        <div className="col-xs-6">
+                          <label>State *</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="state"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col-xs-6">
+                          <label>ZIP *</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="zip"
+                            required
+                          />
+                        </div>
+                        <div className="col-xs-6">
+                          <label>Phone *</label>
+                          <input
+                            type="text"
+                            className="form-control"
+                            name="phone"
+                            required
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 <h2 className="title title-simple text-uppercase text-left mt-6">
