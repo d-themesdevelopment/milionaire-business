@@ -97,7 +97,11 @@ function MobileMenu(props) {
           </li>
 
           <li>
-            <ALink href="/">Categories</ALink>
+            <ALink href="/">Event</ALink>
+          </li>
+
+          <li>
+            <ALink href="/">Shop</ALink>
           </li>
 
           <li>

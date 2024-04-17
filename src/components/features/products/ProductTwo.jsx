@@ -11,7 +11,7 @@ function ProductTwo(props) {
   return (
     <div className={`product text-left ${adClass}`}>
       <figure className="product-media">
-        <ALink href={`/product/default/${product.slug}`}>
+        <ALink href={`/`}>
           <LazyLoadImage
             alt="product"
             src={`./images/home/products/${product.imgUrl}`}

@@ -14,8 +14,12 @@ function MainMenu() {
                     <ALink href='/'>Home</ALink>
                 </li>
 
+                <li className={ `${ pathname.includes( '/event' ) ? 'active' : '' }` }>
+                    <ALink href='/event'>Event</ALink>
+                </li>
+
                 <li className={ `${ pathname.includes( '/shop' ) ? 'active' : '' }` }>
-                    <ALink href='/shop'>Categories</ALink>
+                    <ALink href='/shop'>Shop</ALink>
                 </li>
 
                 <li className={ `${ pathname.includes( '/product' ) && !pathname.includes( '/elements' ) ? 'active' : '' }` }>

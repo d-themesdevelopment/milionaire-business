@@ -5,12 +5,15 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import GoogleMapReact from "google-map-react";
 
 const text = `
 A dog is a type of domesticated animal.
 Known for its loyalty and faithfulness,
 it can be found as a welcome guest in many households across the world.
 `;
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 const items = [
   {
@@ -42,15 +45,16 @@ const items = [
     key: "6",
     label: "Location",
     children: (
-      <div className="google-map">
-        <img src="./images/map.png" width={761} height={300} alt="Map" />
-        <img
-          src="./images/map-picker.png"
-          className="map-picker"
-          width={36}
-          height={57}
-          alt="Map"
-        />
+      <div style={{ width: "100%", height: "400px" }} id="map">
+        <GoogleMapReact
+          bootstrapURLKeys={{
+            key: "AIzaSyBgVsModMpsR59_OIK-2sEcmhBBkW4xUuw",
+          }}
+          defaultCenter={{ lat: 59.95, lng: 30.33 }}
+          defaultZoom={11}
+        >
+          <AnyReactComponent lat={59.955413} lng={30.337844} text="My Marker" />
+        </GoogleMapReact>
       </div>
     ),
   },

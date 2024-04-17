@@ -487,3 +487,44 @@ footer .social-links > a {
     white-space: normal;
   }
 }
+
+.product-thumbs-one {
+  .swiper {
+    height: 100%;
+  }
+
+  .swiper-slide {
+    height: auto !important;
+
+    img {
+      height: 107px;
+      object-fit: cover;
+    }
+  }
+}
+
+.product-single-carousel {
+  img {
+    height: 458px;
+    object-fit: cover;
+  }
+}
+
+
+@media(max-width: 575px) {
+  .product-thumbs-one {  
+    margin-top: 2px;
+    
+    .swiper-slide {
+      img {
+        height: 78px;
+      }
+    }
+  }
+  
+  .product-single-carousel {
+    img {
+      height: 343px;
+    }
+  }
+}
