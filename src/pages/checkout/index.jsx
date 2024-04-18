@@ -197,7 +197,7 @@ const CheckoutPage = () => {
                   </GoogleMapReact>
                 </div>
 
-                <div className="form-checkbox mb-6 mt-5">
+                {/* <div className="form-checkbox mb-6 mt-5">
                   <input
                     type="checkbox"
                     className="custom-checkbox"
@@ -311,7 +311,7 @@ const CheckoutPage = () => {
                       </div>
                     </div>
                   )}
-                </div>
+                </div> */}
 
                 <h2 className="title title-simple text-uppercase text-left mt-6">
                   Additional Information
