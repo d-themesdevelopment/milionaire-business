@@ -1,7 +1,9 @@
 import ALink from "@/components/features/CustomLink";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 // import addCurrentLocation from "google-maps-current-location";
 import GoogleMapReact from "google-map-react";
+import Select from 'react-select'
+import countryList from 'react-select-country-list'
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
@@ -31,6 +33,13 @@ const CheckoutPage = () => {
   const onChange = (key) => {
     console.log(key);
   };
+
+  const [value, setValue] = useState('')
+  const options = useMemo(() => countryList().getData(), [])
+
+  const changeHandler = value => {
+    setValue(value)
+  }
 
   return (
     <main className="main checkout">
@@ -85,18 +94,8 @@ const CheckoutPage = () => {
                   required
                 />
                 <label>Country / Region *</label>
-                <div className="select-box">
-                  <select
-                    name="country"
-                    className="form-control"
-                    defaultValue="us"
-                  >
-                    <option value="us">United States (US)</option>
-                    <option value="uk"> United Kingdom</option>
-                    <option value="fr">France</option>
-                    <option value="aus">Austria</option>
-                  </select>
-                </div>
+
+                <Select className="country-select" options={options} value={value} onChange={changeHandler} />
 
                 <label>Street Address *</label>
                 <input
